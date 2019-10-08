@@ -45,6 +45,7 @@ ul.notifications li button {
     border: 0;
     font-weight: bold;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 ul.notifications li button.accept {

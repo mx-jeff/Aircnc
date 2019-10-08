@@ -14,7 +14,7 @@ module.exports = {
 
         await booking.populate('spot').populate('user').execPopulate()
 
-        const ownerSocket = request.connectedUser[booking.spot.user]
+        const ownerSocket = request.connectedUsers[booking.spot.user]
 
         if(ownerSocket){
             request.socketIo.to(ownerSocket).emit('booking', booking)
